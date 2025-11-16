@@ -17,7 +17,7 @@ declare module "@mui/material/Typography" {
 
 let theme = createTheme({
   typography: {
-    fontFamily: "Karla, sans-serif",
+    fontFamily: "Nunito, Nunito Sans, sans-serif",
   },
   palette: {
     green: {
