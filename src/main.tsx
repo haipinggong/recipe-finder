@@ -11,9 +11,9 @@ createRoot(document.getElementById("root")!).render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <GlobalStyles
-        styles={(theme) => ({
-          body: { backgroundColor: theme.palette.green.light },
-        })}
+        styles={{
+          body: { margin: 0, boxSizing: "border-box" },
+        }}
       />
       <App />
     </ThemeProvider>
