@@ -44,39 +44,39 @@ theme = createTheme(theme, {
       lineHeight: "110%",
       letterSpacing: "-2px",
       fontWeight: theme.typography.fontWeightExtraBold,
+      color: "#163A34",
     },
     h2: {
       fontSize: "3rem",
       lineHeight: "120%",
       letterSpacing: "-2px",
       fontWeight: theme.typography.fontWeightExtraBold,
+      color: "#163A34",
     },
     h3: {
       fontSize: "2rem",
       lineHeight: "130%",
       letterSpacing: "-1px",
       fontWeight: theme.typography.fontWeightBold,
+      color: "#163A34",
     },
     body1: {
       fontSize: "1.25rem",
       lineHeight: "150%",
       letterSpacing: "-0.4px",
+      fontWeight: theme.typography.fontWeightMedium,
+      color: "#395852",
     },
   },
   palette: {
     primary: {
-      main: "#0C7D69",
-    },
-    secondary: {
-      main: "#253347",
+      main: "#163A34",
     },
     text: {
-      primary: "#12131A",
-      secondary: "#5E6E85",
+      primary: "#163A34",
     },
     background: {
-      default: "#FFFFFF",
-      paper: "#FFFFFF",
+      default: "#F6F5F1",
     },
   },
 });
