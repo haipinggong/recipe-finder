@@ -17,6 +17,7 @@ const styles: Record<string, SxProps<Theme>> = {
     gap: 2.5,
     [theme.breakpoints.up("md")]: {
       flex: 1,
+      maxWidth: "40%",
     },
   }),
   imageWrapper: (theme: Theme) => ({

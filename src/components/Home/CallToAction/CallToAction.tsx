@@ -6,7 +6,7 @@ export const CallToAction = () => {
     <Box component="section" sx={styles.container}>
       <Box sx={styles.content}>
         <Typography variant="h2">Ready to cook smarter?</Typography>
-        <Typography variant="body1">
+        <Typography>
           Hit the button, pick a recipe, and get dinner on the table—fast.
         </Typography>
       </Box>

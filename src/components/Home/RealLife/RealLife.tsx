@@ -7,10 +7,14 @@ export const RealLife = () => {
     <Box component="section" sx={styles.container}>
       <Box sx={styles.content}>
         <Typography variant="h2">Built for real life</Typography>
-        <Typography variant="body1">
+        <Typography>
           Cooking shouldn't be complicated. These recipes come in under 30
           minutes of active time, fit busy schedules, and taste good enough to
           repeat.
+        </Typography>
+        <Typography>
+          Whether you’re new to the kitchen or just need fresh ideas, we’ve got
+          you covered.
         </Typography>
       </Box>
 
