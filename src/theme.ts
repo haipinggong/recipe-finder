@@ -40,18 +40,27 @@ let theme = createTheme({
 theme = createTheme(theme, {
   typography: {
     h1: {
-      fontSize: "4.5rem",
+      fontSize: "3.25rem",
       lineHeight: "110%",
       letterSpacing: "-2px",
       fontWeight: theme.typography.fontWeightExtraBold,
       color: "#163A34",
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "4rem",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "4.5rem",
+      },
     },
     h2: {
-      fontSize: "3rem",
+      fontSize: "2.5rem",
       lineHeight: "120%",
       letterSpacing: "-2px",
       fontWeight: theme.typography.fontWeightExtraBold,
       color: "#163A34",
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "3rem",
+      },
     },
     h3: {
       fontSize: "2rem",

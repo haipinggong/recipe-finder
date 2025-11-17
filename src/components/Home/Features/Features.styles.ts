@@ -6,11 +6,15 @@ const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     gap: 4,
   },
-  features: {
+  features: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: 3,
-  },
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+      gap: 4,
+    },
+  }),
   feature: {
     display: "flex",
     flexDirection: "column",

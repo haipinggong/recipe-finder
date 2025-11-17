@@ -10,6 +10,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     [theme.breakpoints.up("sm")]: {
       flexDirection: "row-reverse",
       justifyContent: "space-between",
+      paddingInline: 12,
     },
   }),
   socialMedia: {

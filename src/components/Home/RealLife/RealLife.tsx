@@ -14,12 +14,14 @@ export const RealLife = () => {
         </Typography>
       </Box>
 
-      <Box
-        component="img"
-        src={builtForRealLifeImage}
-        alt="built for real life"
-        sx={styles.image}
-      />
+      <Box sx={styles.imageWrapper}>
+        <Box
+          component="img"
+          src={builtForRealLifeImage}
+          alt="built for real life"
+          sx={styles.image}
+        />
+      </Box>
     </Box>
   );
 };
