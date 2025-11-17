@@ -69,6 +69,18 @@ theme = createTheme(theme, {
       fontWeight: theme.typography.fontWeightBold,
       color: "#163A34",
     },
+    h4: {
+      fontSize: "1.5rem",
+      lineHeight: "130%",
+      letterSpacing: "-1px",
+      fontWeight: theme.typography.fontWeightBold,
+    },
+    h5: {
+      fontSize: "1.25rem",
+      lineHeight: "140%",
+      letterSpacing: "-0.5px",
+      fontWeight: theme.typography.fontWeightBold,
+    },
     body1: {
       fontSize: "1.25rem",
       lineHeight: "150%",

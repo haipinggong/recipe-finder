@@ -6,27 +6,36 @@ export const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     alignItems: "flex-start",
     marginTop: 6,
-
     [theme.breakpoints.up("md")]: {
       alignItems: "center",
       textAlign: "center",
       marginTop: 10,
     },
   }),
-  description: {
-    marginTop: 2,
-    maxWidth: "580px",
+  content: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: 3,
   },
-  button: (theme: Theme) => ({
-    textTransform: "none",
-    borderRadius: 2.5,
-    padding: theme.spacing(2, 4),
-    fontSize: "1.25rem",
-    lineHeight: "140%",
-    letterSpacing: "-0.5px",
-    fontWeight: theme.typography.fontWeightBold,
-    marginTop: 4,
-  }),
+  title: {
+    position: "relative",
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      left: "-4px",
+      right: "-4px",
+      height: "1.25em",
+      backgroundColor: "#FE9F6B",
+      zIndex: -1,
+      borderRadius: 1,
+    },
+  },
+  description: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 2,
+  },
   image: {
     width: "100%",
     height: "100%",
@@ -34,22 +43,5 @@ export const styles: Record<string, SxProps<Theme>> = {
     marginTop: 5,
     border: `5px solid white`,
     borderRadius: 2.5,
-  },
-  highlight: {
-    position: "relative",
-    display: "inline-block",
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      left: "-4px",
-      right: "-4px",
-      top: "50%",
-      transform: "translateY(-10%)",
-      height: "0.6em",
-      backgroundColor: "#FE9F6B",
-      zIndex: -1,
-      borderRadius: "2px",
-      opacity: 0.5,
-    },
   },
 };
