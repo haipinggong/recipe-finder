@@ -13,6 +13,13 @@ const styles: Record<string, SxProps<Theme>> = {
     gap: 4,
     textAlign: "center",
     overflow: "hidden",
+    marginTop: 8,
+    [theme.breakpoints.up("sm")]: {
+      marginTop: 10,
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: 12,
+    },
     [theme.breakpoints.up("lg")]: {
       backgroundImage: `url("${patternFork}"), url("${patternKnife}")`,
       backgroundSize: "auto 90%, auto 90%",

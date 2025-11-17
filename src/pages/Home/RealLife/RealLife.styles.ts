@@ -5,10 +5,15 @@ const styles: Record<string, SxProps<Theme>> = {
     display: "flex",
     flexDirection: "column",
     gap: 4,
+    marginTop: 8,
+    [theme.breakpoints.up("sm")]: {
+      marginTop: 10,
+    },
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       gap: 6,
       alignItems: "center",
+      marginTop: 12,
     },
   }),
   content: (theme: Theme) => ({
@@ -21,7 +26,6 @@ const styles: Record<string, SxProps<Theme>> = {
     },
   }),
   imageWrapper: (theme: Theme) => ({
-    width: "100%",
     [theme.breakpoints.up("md")]: {
       flex: 1,
     },

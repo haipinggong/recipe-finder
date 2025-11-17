@@ -5,10 +5,15 @@ const styles: Record<string, SxProps<Theme>> = {
     display: "flex",
     flexDirection: "column",
     gap: 4,
+    marginTop: 8,
 
     [theme.breakpoints.up("sm")]: {
       paddingBottom: theme.spacing(10),
       borderBottom: "1px solid #E0E6E3",
+      marginTop: 10,
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: 12,
     },
   }),
   features: (theme: Theme) => ({
