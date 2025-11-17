@@ -6,23 +6,17 @@ const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     gap: 4,
   },
-  features: {
-    display: "flex",
-    flexDirection: "column",
-    gap: 3,
-  },
-  feature: {
+  content: {
     display: "flex",
     flexDirection: "column",
     gap: 2.5,
   },
-  featureImage: (theme: Theme) => ({
-    width: "60px",
-    aspectRatio: "1/1",
-    padding: theme.spacing(0.5, 1),
-    backgroundColor: "white",
-    borderRadius: 3,
-  }),
+  image: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    borderRadius: 2.5,
+  },
 };
 
 export default styles;
