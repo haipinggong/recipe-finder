@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { Hero } from "./Hero/Hero";
 import { Features } from "./Features/Features";
 import { RealLife } from "./RealLife/RealLife";
-import { CallToAction } from "../CallToAction/CallToAction";
+import { CallToAction } from "../../components/CallToAction/CallToAction";
 import { styles } from "./Home.styles";
 
 export const Home = () => {
