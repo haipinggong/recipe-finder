@@ -32,6 +32,24 @@ const styles: Record<string, SxProps<Theme>> = {
     objectFit: "cover",
     borderRadius: 2.5,
   },
+  highlight: (theme: Theme) => ({
+    [theme.breakpoints.up("sm")]: {
+      position: "relative",
+      display: "inline-block",
+      "&::before": {
+        content: '""',
+        position: "absolute",
+        left: "-4px",
+        right: "-4px",
+        top: "50%",
+        transform: "translateY(-10%)",
+        height: "0.6em",
+        backgroundColor: "#FE9F6B",
+        zIndex: -1,
+        borderRadius: "2px",
+      },
+    },
+  }),
 };
 
 export default styles;
