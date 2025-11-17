@@ -6,6 +6,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     alignItems: "flex-start",
     marginTop: 6,
+
     [theme.breakpoints.up("md")]: {
       alignItems: "center",
       textAlign: "center",
@@ -33,5 +34,22 @@ export const styles: Record<string, SxProps<Theme>> = {
     marginTop: 5,
     border: `5px solid white`,
     borderRadius: 2.5,
+  },
+  highlight: {
+    position: "relative",
+    display: "inline-block",
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      left: "-4px",
+      right: "-4px",
+      top: "50%",
+      transform: "translateY(-10%)",
+      height: "0.6em",
+      backgroundColor: "#FE9F6B",
+      zIndex: -1,
+      borderRadius: "2px",
+      opacity: 0.5,
+    },
   },
 };
