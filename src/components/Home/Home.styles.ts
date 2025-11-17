@@ -4,9 +4,11 @@ export const styles: Record<string, SxProps<Theme>> = {
   container: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
-    gap: 8,
+    paddingInline: 2,
+    [theme.breakpoints.up("sm")]: {
+      paddingInline: 4,
+    },
     [theme.breakpoints.up("md")]: {
-      gap: 12,
       paddingInline: 12,
     },
   }),

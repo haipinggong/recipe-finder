@@ -2,12 +2,12 @@ import { Box } from "@mui/material";
 import { Hero } from "./Hero/Hero";
 import { Features } from "./Features/Features";
 import { RealLife } from "./RealLife/RealLife";
-import { CallToAction } from "./CallToAction/CallToAction";
+import { CallToAction } from "../CallToAction/CallToAction";
 import { styles } from "./Home.styles";
 
 export const Home = () => {
   return (
-    <Box sx={styles.container}>
+    <Box component="main" sx={styles.container}>
       <Hero />
       <Features />
       <RealLife />

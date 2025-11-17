@@ -1,11 +1,16 @@
 import { type SxProps, type Theme } from "@mui/material";
 
 const styles: Record<string, SxProps<Theme>> = {
-  container: {
+  container: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: 4,
-  },
+
+    [theme.breakpoints.up("sm")]: {
+      paddingBottom: theme.spacing(10),
+      borderBottom: "1px solid #E0E6E3",
+    },
+  }),
   features: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",

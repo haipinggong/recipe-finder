@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
-import patternFork from "../../../assets/images/pattern-fork.svg";
-import patternKnife from "../../../assets/images/pattern-knife.svg";
+import patternFork from "../../assets/images/pattern-fork.svg";
+import patternKnife from "../../assets/images/pattern-knife.svg";
 
 const styles: Record<string, SxProps<Theme>> = {
   container: (theme: Theme) => ({
