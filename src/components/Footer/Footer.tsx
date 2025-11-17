@@ -2,16 +2,17 @@ import { Box, Typography } from "@mui/material";
 import instagramIcon from "../../assets/images/icon-instagram.svg";
 import blueSkyIcon from "../../assets/images/icon-bluesky.svg";
 import tiktokIcon from "../../assets/images/icon-tiktok.svg";
+import { styles } from "./Footer.styles";
 
 export const Footer = () => {
   return (
-    <Box>
-      <Typography>Made with ❤️ and 🥑</Typography>
-      <Box>
-        <img src={instagramIcon} alt="instagram" />
-        <img src={blueSkyIcon} alt="blue sky" />
-        <img src={tiktokIcon} alt="tiktok" />
+    <Box sx={styles.container}>
+      <Box sx={styles.socialMedia}>
+        <Box component="img" src={instagramIcon} alt="instagram" />
+        <Box component="img" src={blueSkyIcon} alt="blue sky" />
+        <Box component="img" src={tiktokIcon} alt="tiktok" />
       </Box>
+      <Typography sx={styles.copyright}>Made with ❤️ and 🥑</Typography>
     </Box>
   );
 };
