@@ -1,13 +1,20 @@
 import { type SxProps, type Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
-  container: {
+  container: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-  },
+    marginTop: 6,
+    [theme.breakpoints.up("md")]: {
+      alignItems: "center",
+      textAlign: "center",
+      marginTop: 10,
+    },
+  }),
   description: {
     marginTop: 2,
+    maxWidth: "580px",
   },
   button: (theme: Theme) => ({
     textTransform: "none",

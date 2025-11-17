@@ -7,6 +7,10 @@ export const styles: Record<string, SxProps<Theme>> = {
     alignItems: "center",
     gap: 3,
     paddingBlock: theme.spacing(4, 2),
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row-reverse",
+      justifyContent: "space-between",
+    },
   }),
   socialMedia: {
     display: "flex",
