@@ -4,14 +4,15 @@ import { Hero } from "./Hero/Hero";
 // import { RealLife } from "./RealLife/RealLife";
 import { CallToAction } from "../../components/CallToAction/CallToAction";
 import { styles } from "./About.styles";
-import { WhyWeExist } from "./Features/WhyWeExist";
+import { WhyWeExist } from "./WhyWeExist/WhyWeExist";
+import { FoodPhilosophy } from "./FoodPhilosophy/FoodPhilosophy";
 
 export const About = () => {
   return (
     <Box component="main" sx={styles.container}>
       <Hero />
       <WhyWeExist />
-      {/* <Features /> */}
+      <FoodPhilosophy />
       <CallToAction />
     </Box>
   );
