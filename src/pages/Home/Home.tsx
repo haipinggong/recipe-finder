@@ -1,17 +1,16 @@
-import { Box } from "@mui/material";
 import { Hero } from "./Hero/Hero";
 import { Features } from "./Features/Features";
 import { RealLife } from "./RealLife/RealLife";
 import { CallToAction } from "../../components/CallToAction/CallToAction";
-import { styles } from "./Home.styles";
+import { MainLayout } from "../../components/MainLayout/MainLayout";
 
 export const Home = () => {
   return (
-    <Box component="main" sx={styles.container}>
+    <MainLayout>
       <Hero />
       <Features />
       <RealLife />
       <CallToAction />
-    </Box>
+    </MainLayout>
   );
 };

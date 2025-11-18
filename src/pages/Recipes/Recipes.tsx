@@ -1,11 +1,10 @@
-import { Box } from "@mui/material";
 import { Hero } from "./Hero/Hero";
-import { styles } from "./Recipes.styles";
+import { MainLayout } from "../../components/MainLayout/MainLayout";
 
 export const Recipes = () => {
   return (
-    <Box component="main" sx={styles.container}>
+    <MainLayout>
       <Hero />
-    </Box>
+    </MainLayout>
   );
 };
