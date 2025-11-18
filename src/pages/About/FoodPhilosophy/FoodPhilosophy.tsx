@@ -13,7 +13,9 @@ import styles from "./FoodPhylosophy";
 export const FoodPhilosophy = () => {
   return (
     <Box component="section" sx={styles.container}>
-      <Typography variant="h2">Our food philosophy</Typography>
+      <Typography variant="h2" sx={styles.title}>
+        Our food philosophy
+      </Typography>
       <List>
         <ListItem alignItems="flex-start">
           <ListItemIcon>

@@ -12,7 +12,14 @@ const styles: Record<string, SxProps<Theme>> = {
       marginTop: 10,
     },
     [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+      gap: 8,
       marginTop: 12,
+    },
+  }),
+  title: (theme: Theme) => ({
+    [theme.breakpoints.up("md")]: {
+      minWidth: "40%",
     },
   }),
   listItemText: (theme: Theme) => ({

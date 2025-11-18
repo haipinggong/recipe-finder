@@ -6,10 +6,11 @@ export const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     alignItems: "flex-start",
     marginTop: 6,
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       alignItems: "center",
-      textAlign: "center",
       marginTop: 10,
+      flexDirection: "row",
+      gap: 8,
     },
   }),
   content: {

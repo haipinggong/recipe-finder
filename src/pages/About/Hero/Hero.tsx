@@ -24,12 +24,14 @@ export const Hero = () => {
           </Typography>
         </Box>
       </Box>
-      <Box
-        component="img"
-        sx={styles.image}
-        src={heroImage}
-        alt="our mission"
-      />
+      <Box>
+        <Box
+          component="img"
+          sx={styles.image}
+          src={heroImage}
+          alt="our mission"
+        />
+      </Box>
     </Box>
   );
 };

@@ -13,7 +13,9 @@ import styles from "./WhyWeExist.styles";
 export const WhyWeExist = () => {
   return (
     <Box component="section" sx={styles.container}>
-      <Typography variant="h2">Why we exist</Typography>
+      <Typography variant="h2" sx={styles.title}>
+        Why we exist
+      </Typography>
       <List>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
