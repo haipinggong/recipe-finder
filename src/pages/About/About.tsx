@@ -6,6 +6,7 @@ import { CallToAction } from "../../components/CallToAction/CallToAction";
 import { styles } from "./About.styles";
 import { WhyWeExist } from "./WhyWeExist/WhyWeExist";
 import { FoodPhilosophy } from "./FoodPhilosophy/FoodPhilosophy";
+import { BeyondPlate } from "./BeyondPlate/BeyondPlate";
 
 export const About = () => {
   return (
@@ -13,6 +14,7 @@ export const About = () => {
       <Hero />
       <WhyWeExist />
       <FoodPhilosophy />
+      <BeyondPlate />
       <CallToAction />
     </Box>
   );
