@@ -4,13 +4,14 @@ import { Hero } from "./Hero/Hero";
 // import { RealLife } from "./RealLife/RealLife";
 import { CallToAction } from "../../components/CallToAction/CallToAction";
 import { styles } from "./About.styles";
+import { WhyWeExist } from "./Features/WhyWeExist";
 
 export const About = () => {
   return (
     <Box component="main" sx={styles.container}>
       <Hero />
-      {/* <Features />
-      <RealLife /> */}
+      <WhyWeExist />
+      {/* <Features /> */}
       <CallToAction />
     </Box>
   );
