@@ -6,7 +6,7 @@ import { styles } from "./Footer.styles";
 
 export const Footer = () => {
   return (
-    <Box sx={styles.container}>
+    <Box sx={styles.container} component="footer">
       <Box sx={styles.socialMedia}>
         <Box component="img" src={instagramIcon} alt="instagram" />
         <Box component="img" src={blueSkyIcon} alt="blue sky" />

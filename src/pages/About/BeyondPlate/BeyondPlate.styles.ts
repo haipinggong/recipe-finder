@@ -10,13 +10,10 @@ const styles: Record<string, SxProps<Theme>> = {
       paddingBottom: theme.spacing(10),
       marginTop: 10,
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       marginTop: 12,
-    },
-  }),
-  listItemText: (theme: Theme) => ({
-    "& .MuiListItemText-primary": {
-      ...theme.typography.h4,
+      flexDirection: "row",
+      gap: 8,
     },
   }),
   dot: (theme: Theme) => ({
@@ -25,6 +22,13 @@ const styles: Record<string, SxProps<Theme>> = {
     borderRadius: "50%",
     backgroundColor: theme.palette.text.primary,
   }),
+  image: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    border: `5px solid white`,
+    borderRadius: 2.5,
+  },
 };
 
 export default styles;
