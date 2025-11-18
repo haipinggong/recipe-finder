@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import iconBulletPoint from "../../../assets/images/icon-bullet-point.svg";
 
-import styles from "./FoodPhylosophy";
+import styles from "./FoodPhylosophy.styles";
 
 export const FoodPhilosophy = () => {
   return (
