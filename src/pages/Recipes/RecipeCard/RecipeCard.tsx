@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import { styles } from "./RecipeCard.styles";
-import { RecipeDetails } from "../RecipeDetails/RecipeDetails";
+import { RecipeMetaInfo } from "../RecipeMetaInfo/RecipeMetaInfo";
 import servingsIcon from "../../../assets/images/icon-servings.svg";
 import prepMinutesIcon from "../../../assets/images/icon-prep-time.svg";
 import cookMinutesIcon from "../../../assets/images/icon-cook-time.svg";
@@ -29,17 +29,17 @@ export const RecipeCard = ({
       </Typography>
       <Typography variant="body2">{overview}</Typography>
       <Box sx={styles.details}>
-        <RecipeDetails
+        <RecipeMetaInfo
           iconUrl={servingsIcon}
           label="Servings"
           value={servings.toString()}
         />
-        <RecipeDetails
+        <RecipeMetaInfo
           iconUrl={prepMinutesIcon}
           label="Prep Minutes"
           value={`${prepMinutes} mins`}
         />
-        <RecipeDetails
+        <RecipeMetaInfo
           iconUrl={cookMinutesIcon}
           label="Cook Minutes"
           value={`${cookMinutes} mins`}

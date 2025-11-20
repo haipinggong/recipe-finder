@@ -7,3 +7,4 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 0.75,
   },
 };
+
