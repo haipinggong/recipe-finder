@@ -56,7 +56,7 @@ export const Recipes = () => {
   return (
     <MainLayout>
       <Hero />
-      <Box sx={styles.filtersContainer}>
+      <Box component="section" sx={styles.filtersContainer}>
         <Box sx={styles.selectsContainer}>
           <FormControl sx={styles.selectControl}>
             <InputLabel id="max-prep-time-label">Max Prep Time</InputLabel>
