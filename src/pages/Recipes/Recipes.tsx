@@ -2,7 +2,7 @@ import { useState, type ChangeEvent } from "react";
 import { Hero } from "./Hero/Hero";
 import { MainLayout } from "../../components/MainLayout/MainLayout";
 import recipesData from "../../data/data.json";
-import { RecipeCard } from "./RecipeCard/RecipeCard";
+import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
 import {
   Box,
   FormControl,

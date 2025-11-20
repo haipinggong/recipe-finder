@@ -1,9 +1,9 @@
 import { Box, Button, Typography } from "@mui/material";
 import { styles } from "./RecipeCard.styles";
 import { RecipeMetaInfo } from "../RecipeMetaInfo/RecipeMetaInfo";
-import servingsIcon from "../../../assets/images/icon-servings.svg";
-import prepMinutesIcon from "../../../assets/images/icon-prep-time.svg";
-import cookMinutesIcon from "../../../assets/images/icon-cook-time.svg";
+import servingsIcon from "../../assets/images/icon-servings.svg";
+import prepMinutesIcon from "../../assets/images/icon-prep-time.svg";
+import cookMinutesIcon from "../../assets/images/icon-cook-time.svg";
 
 interface RecipeCardProps {
   imageUrl: string;
