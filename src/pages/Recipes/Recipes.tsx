@@ -56,65 +56,65 @@ export const Recipes = () => {
   return (
     <MainLayout>
       <Hero />
-      <Box component="section" sx={styles.filtersContainer}>
-        <Box sx={styles.selectsContainer}>
-          <FormControl sx={styles.selectControl}>
-            <InputLabel id="max-prep-time-label">Max Prep Time</InputLabel>
-            <Select
-              labelId="max-prep-time-label"
-              id="max-prep-time-select"
-              value={maxPrepTime}
-              label="Max Prep Time"
-              onChange={handlePrepTimeChange}
-              sx={styles.input}
-            >
-              <MenuItem value="">All</MenuItem>
-              <MenuItem value="5">5 minutes</MenuItem>
-              <MenuItem value="10">10 minutes</MenuItem>
-            </Select>
-          </FormControl>
+      <Box component="section" sx={styles.gridContainer}>
+        <Box sx={styles.filtersContainer}>
+          <Box sx={styles.selectsContainer}>
+            <FormControl sx={styles.selectControl}>
+              <InputLabel id="max-prep-time-label">Max Prep Time</InputLabel>
+              <Select
+                labelId="max-prep-time-label"
+                id="max-prep-time-select"
+                value={maxPrepTime}
+                label="Max Prep Time"
+                onChange={handlePrepTimeChange}
+                sx={styles.input}
+              >
+                <MenuItem value="">All</MenuItem>
+                <MenuItem value="5">5 minutes</MenuItem>
+                <MenuItem value="10">10 minutes</MenuItem>
+              </Select>
+            </FormControl>
 
-          <FormControl sx={styles.selectControl}>
-            <InputLabel id="max-cook-time-label">Max Cook Time</InputLabel>
-            <Select
-              labelId="max-cook-time-label"
-              id="max-cook-time-select"
-              value={maxCookTime}
-              label="Max Cook Time"
-              onChange={handleCookTimeChange}
-              sx={styles.input}
-            >
-              <MenuItem value="">All</MenuItem>
-              <MenuItem value="5">5 minutes</MenuItem>
-              <MenuItem value="10">10 minutes</MenuItem>
-              <MenuItem value="15">15 minutes</MenuItem>
-              <MenuItem value="20">20 minutes</MenuItem>
-            </Select>
-          </FormControl>
+            <FormControl sx={styles.selectControl}>
+              <InputLabel id="max-cook-time-label">Max Cook Time</InputLabel>
+              <Select
+                labelId="max-cook-time-label"
+                id="max-cook-time-select"
+                value={maxCookTime}
+                label="Max Cook Time"
+                onChange={handleCookTimeChange}
+                sx={styles.input}
+              >
+                <MenuItem value="">All</MenuItem>
+                <MenuItem value="5">5 minutes</MenuItem>
+                <MenuItem value="10">10 minutes</MenuItem>
+                <MenuItem value="15">15 minutes</MenuItem>
+                <MenuItem value="20">20 minutes</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+
+          <TextField
+            placeholder="Search by name or ingredient…"
+            value={search}
+            onChange={handleSearchChange}
+            fullWidth
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <Box
+                    component="img"
+                    src={searchIcon}
+                    alt="search"
+                    sx={styles.searchIcon}
+                  />
+                ),
+                sx: styles.input,
+              },
+            }}
+            sx={styles.searchBar}
+          />
         </Box>
-
-        <TextField
-          placeholder="Search by name or ingredient…"
-          value={search}
-          onChange={handleSearchChange}
-          fullWidth
-          slotProps={{
-            input: {
-              startAdornment: (
-                <Box
-                  component="img"
-                  src={searchIcon}
-                  alt="search"
-                  sx={styles.searchIcon}
-                />
-              ),
-              sx: styles.input,
-            },
-          }}
-          sx={styles.searchBar}
-        />
-      </Box>
-      <Box sx={styles.recipesContainer}>
         {filteredRecipes.map((recipe) => (
           <RecipeCard
             key={recipe.id}

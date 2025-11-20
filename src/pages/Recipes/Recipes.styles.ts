@@ -1,9 +1,27 @@
 import { type SxProps, type Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
-  filtersContainer: (theme: Theme) => ({
+  gridContainer: (theme: Theme) => ({
     marginTop: 4,
-    marginBottom: 4,
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    gap: 4,
+    [theme.breakpoints.up("sm")]: {
+      gridTemplateColumns: "repeat(2, 1fr)",
+    },
+    [theme.breakpoints.up("md")]: {
+      gridTemplateColumns: "repeat(3, 1fr)",
+    },
+    [theme.breakpoints.up("lg")]: {
+      gridTemplateColumns: "repeat(4, 1fr)",
+    },
+    [theme.breakpoints.up("xl")]: {
+      gridTemplateColumns: "repeat(5, 1fr)",
+    },
+  }),
+  filtersContainer: (theme: Theme) => ({
+    gridColumn: "1 / -1",
+    marginBottom: 0,
     display: "flex",
     flexDirection: "column",
     gap: 2,
@@ -39,13 +57,4 @@ export const styles: Record<string, SxProps<Theme>> = {
   searchIcon: {
     marginRight: 1,
   },
-  recipesContainer: (theme: Theme) => ({
-    display: "flex",
-    flexDirection: "column",
-    gap: 4,
-    [theme.breakpoints.up("sm")]: {
-      flexDirection: "row",
-      flexWrap: "wrap",
-    },
-  }),
 };
