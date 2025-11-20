@@ -24,8 +24,10 @@ export const RecipeCard = ({
   return (
     <Box sx={styles.container}>
       <Box component="img" src={imageUrl} alt={title} sx={styles.image} />
-      <Typography variant="h2">{title}</Typography>
-      <Typography>{overview}</Typography>
+      <Typography component="h2" sx={styles.title}>
+        {title}
+      </Typography>
+      <Typography variant="body2">{overview}</Typography>
       <Box sx={styles.details}>
         <RecipeDetails
           iconUrl={servingsIcon}
@@ -43,7 +45,7 @@ export const RecipeCard = ({
           value={`${cookMinutes} mins`}
         />
       </Box>
-      <Button variant="contained" color="primary" sx={styles.button}>
+      <Button variant="contained" color="primary" sx={styles.button} fullWidth>
         View Recipe
       </Button>
     </Box>
