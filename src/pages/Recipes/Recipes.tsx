@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import { Hero } from "./Hero/Hero";
 import { MainLayout } from "../../components/MainLayout/MainLayout";
 import recipesData from "../../data/data.json";
@@ -10,13 +10,16 @@ import {
   MenuItem,
   Select,
   type SelectChangeEvent,
+  TextField,
 } from "@mui/material";
 import { styles } from "./Recipes.styles";
 import { getRecipeImageUrl } from "../../utils/recipeImages";
+import searchIcon from "../../assets/images/icon-search.svg";
 
 export const Recipes = () => {
   const [maxPrepTime, setMaxPrepTime] = useState("");
   const [maxCookTime, setMaxCookTime] = useState("");
+  const [search, setSearch] = useState("");
 
   const handlePrepTimeChange = (event: SelectChangeEvent<string>) => {
     setMaxPrepTime(event.target.value);
@@ -26,18 +29,28 @@ export const Recipes = () => {
     setMaxCookTime(event.target.value);
   };
 
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value);
+  };
+
   const filteredRecipes = recipesData.filter((recipe) => {
-    if (!maxPrepTime && !maxCookTime) return true;
-    if (maxPrepTime && !maxCookTime)
-      return recipe.prepMinutes <= Number(maxPrepTime);
-    if (!maxPrepTime && maxCookTime)
-      return recipe.cookMinutes <= Number(maxCookTime);
-    if (maxPrepTime && maxCookTime)
-      return (
-        recipe.prepMinutes <= Number(maxPrepTime) &&
-        recipe.cookMinutes <= Number(maxCookTime)
+    if (search) {
+      const searchLower = search.toLowerCase();
+      const titleMatches = recipe.title.toLowerCase().includes(searchLower);
+      const ingredientMatches = recipe.ingredients.some((ingredient) =>
+        ingredient.toLowerCase().includes(searchLower)
       );
-    return false;
+      if (!titleMatches && !ingredientMatches) {
+        return false;
+      }
+    }
+
+    const prepTimeMatches =
+      !maxPrepTime || recipe.prepMinutes <= Number(maxPrepTime);
+    const cookTimeMatches =
+      !maxCookTime || recipe.cookMinutes <= Number(maxCookTime);
+
+    return prepTimeMatches && cookTimeMatches;
   });
 
   return (
@@ -52,6 +65,7 @@ export const Recipes = () => {
             value={maxPrepTime}
             label="Max Prep Time"
             onChange={handlePrepTimeChange}
+            sx={styles.input}
           >
             <MenuItem value="">All</MenuItem>
             <MenuItem value="5">5 minutes</MenuItem>
@@ -67,6 +81,7 @@ export const Recipes = () => {
             value={maxCookTime}
             label="Max Cook Time"
             onChange={handleCookTimeChange}
+            sx={styles.input}
           >
             <MenuItem value="">All</MenuItem>
             <MenuItem value="5">5 minutes</MenuItem>
@@ -75,6 +90,24 @@ export const Recipes = () => {
             <MenuItem value="20">20 minutes</MenuItem>
           </Select>
         </FormControl>
+        <TextField
+          placeholder="Search by name or ingredient…"
+          value={search}
+          onChange={handleSearchChange}
+          slotProps={{
+            input: {
+              startAdornment: (
+                <Box
+                  component="img"
+                  src={searchIcon}
+                  alt="search"
+                  sx={styles.searchIcon}
+                />
+              ),
+              sx: styles.input,
+            },
+          }}
+        />
       </Box>
       <Box sx={styles.recipesContainer}>
         {filteredRecipes.map((recipe) => (

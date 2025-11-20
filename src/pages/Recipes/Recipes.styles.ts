@@ -14,6 +14,13 @@ export const styles: Record<string, SxProps<Theme>> = {
       minWidth: 250,
     },
   }),
+  input: {
+    borderRadius: 2.5,
+    backgroundColor: "white",
+  },
+  searchIcon: {
+    marginRight: 1,
+  },
   recipesContainer: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
