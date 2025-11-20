@@ -4,6 +4,7 @@ import recipesData from "../../data/data.json";
 import { RecipeCard } from "./RecipeCard/RecipeCard";
 import { Box } from "@mui/material";
 import { styles } from "./Recipes.styles";
+import { getRecipeImageUrl } from "../../utils/recipeImages";
 
 export const Recipes = () => {
   console.log(recipesData);
@@ -16,7 +17,7 @@ export const Recipes = () => {
           <RecipeCard
             key={recipe.id}
             {...recipe}
-            imageUrl={recipe.image.large}
+            imageUrl={getRecipeImageUrl(recipe.image.large)}
           />
         ))}
       </Box>
