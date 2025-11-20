@@ -12,7 +12,7 @@ export const Recipes = () => {
   return (
     <MainLayout>
       <Hero />
-      <Box sx={styles.recipes}>
+      <Box sx={styles.recipesContainer}>
         {recipesData.map((recipe) => (
           <RecipeCard
             key={recipe.id}

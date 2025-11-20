@@ -1,18 +1,22 @@
 import { type SxProps, type Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
-  container: {
+  container: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
+    justifyContent: "space-between",
     padding: 1,
     gap: 2,
     backgroundColor: "white",
     borderRadius: 2.5,
-  },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: "300px",
+    },
+  }),
   image: {
     width: "100%",
-    height: "100%",
+    aspectRatio: "1/1",
     objectFit: "cover",
     border: `5px solid white`,
     borderRadius: 2.5,
