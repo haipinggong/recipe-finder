@@ -7,9 +7,9 @@ export const styles: Record<string, SxProps<Theme>> = {
     display: "flex",
     flexDirection: "column",
     gap: 2,
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
-      // justifyContent: "space-between",
+      justifyContent: "space-between",
     },
   }),
   selectsContainer: (theme: Theme) => ({
@@ -18,18 +18,20 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 2,
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
-      justifyContent: "space-between",
     },
   }),
   selectControl: (theme: Theme) => ({
     minWidth: 200,
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("lg")]: {
       minWidth: 300,
     },
   }),
-  searchBar: {
-    alignSelf: "flex-end",
-  },
+  searchBar: (theme: Theme) => ({
+    [theme.breakpoints.up("lg")]: {
+      width: 400,
+      flexShrink: 0,
+    },
+  }),
   input: {
     borderRadius: 2.5,
     backgroundColor: "white",
