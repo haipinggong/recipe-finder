@@ -88,6 +88,13 @@ theme = createTheme(theme, {
       fontWeight: theme.typography.fontWeightMedium,
       color: "#395852",
     },
+    body2: {
+      fontSize: "1rem",
+      lineHeight: "150%",
+      letterSpacing: "-0.3px",
+      fontWeight: theme.typography.fontWeightMedium,
+      fontFamily: "Nunito Sans, sans-serif",
+    },
   },
   palette: {
     primary: {
