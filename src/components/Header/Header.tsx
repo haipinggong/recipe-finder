@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import logo from "../../assets/images/logo.svg";
 import { styles } from "./Header.styles";
+import { Link } from "react-router-dom";
 import hamburgerMenuIcon from "../../assets/images/icon-hamburger-menu.svg";
 import { useState } from "react";
 
@@ -35,17 +36,13 @@ export const Header = () => {
         </IconButton>
       )}
       <Drawer open={openMenu} onClose={toggleDrawer(false)} anchor="right">
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onClick={toggleDrawer(false)}
-        >
+        <Box sx={{ width: 250 }} role="presentation" component="nav">
           <List>
             {["Home", "About", "Recipes"].map((text) => (
               <ListItem key={text}>
                 <ListItemButton
-                  component="a"
-                  href={`/${text.toLowerCase()}`}
+                  component={Link}
+                  to={text === "Home" ? "/" : `/${text.toLowerCase()}`}
                   onClick={toggleDrawer(false)}
                 >
                   <ListItemText primary={text} />

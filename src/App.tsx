@@ -3,7 +3,7 @@ import { About } from "./pages/About/About";
 import { Recipes } from "./pages/Recipes/Recipes";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { RecipeDetail } from "./pages/RecipeDetail/RecipeDetail";
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/about" element={<About />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/recipe/:slug" element={<RecipeDetail />} />
