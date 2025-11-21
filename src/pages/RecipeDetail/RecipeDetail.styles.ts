@@ -13,6 +13,11 @@ export const styles: Record<string, SxProps<Theme>> = {
       gap: 8,
     },
   }),
+  imageContainer: (theme: Theme) => ({
+    [theme.breakpoints.up("lg")]: {
+      width: "50%",
+    },
+  }),
   image: {
     width: "100%",
     aspectRatio: "1/1",

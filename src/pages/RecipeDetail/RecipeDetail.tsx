@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { MainLayout } from "../../components/MainLayout/MainLayout";
 import recipesData from "../../data/data.json";
@@ -21,6 +22,10 @@ import iconBulletPoint from "../../assets/images/icon-bullet-point.svg";
 
 export const RecipeDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!slug) {
     return (
