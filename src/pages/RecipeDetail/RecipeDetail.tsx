@@ -42,12 +42,15 @@ export const RecipeDetail = () => {
   return (
     <MainLayout>
       <Box component="section" sx={styles.container}>
-        <Box
-          component="img"
-          src={getRecipeImageUrl(recipe.image.large)}
-          alt={recipe.title}
-          sx={styles.image}
-        />
+        <Box sx={styles.imageContainer}>
+          <Box
+            component="img"
+            src={getRecipeImageUrl(recipe.image.large)}
+            alt={recipe.title}
+            sx={styles.image}
+          />
+        </Box>
+
         <Box sx={styles.content}>
           <Typography component="h1" variant="h2">
             {recipe.title}
@@ -110,13 +113,17 @@ export const RecipeDetail = () => {
       <Box component="section" sx={styles.moreRecipesContainer}>
         <Typography variant="h3">More recipes</Typography>
         <Box sx={styles.moreRecipes}>
-          {recipesData.map((recipe) => (
-            <RecipeCard
-              key={recipe.id}
-              {...recipe}
-              imageUrl={getRecipeImageUrl(recipe.image.large)}
-            />
-          ))}
+          {recipesData
+            .filter((r) => r.id !== recipe.id)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3)
+            .map((recipe) => (
+              <RecipeCard
+                key={recipe.id}
+                {...recipe}
+                imageUrl={getRecipeImageUrl(recipe.image.large)}
+              />
+            ))}
         </Box>
       </Box>
     </MainLayout>

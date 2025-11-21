@@ -8,7 +8,6 @@ export const styles: Record<string, SxProps<Theme>> = {
     marginTop: 6,
     gap: 5,
     [theme.breakpoints.up("lg")]: {
-      alignItems: "center",
       marginTop: 10,
       flexDirection: "row",
       gap: 8,
@@ -49,9 +48,14 @@ export const styles: Record<string, SxProps<Theme>> = {
     marginTop: 6,
     gap: 2,
   },
-  moreRecipes: {
+  moreRecipes: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: 2,
-  },
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+      // justifyContent: "space-between",
+      gap: 4,
+    },
+  }),
 };
