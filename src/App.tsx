@@ -4,6 +4,7 @@ import { Recipes } from "./pages/Recipes/Recipes";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
+import { RecipeDetail } from "./pages/RecipeDetail/RecipeDetail";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/recipes" element={<Recipes />} />
+        <Route path="/recipes/:slug" element={<RecipeDetail />} />
       </Routes>
       <Footer />
     </>
