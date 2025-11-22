@@ -14,4 +14,27 @@ export const styles: Record<string, SxProps<Theme>> = {
       padding: theme.spacing(2.5, 7.5),
     },
   }),
+
+  button: (theme: Theme) => ({
+    textTransform: "none",
+    borderRadius: 2.5,
+    padding: theme.spacing(2, 4),
+    fontSize: "1.25rem",
+    lineHeight: "140%",
+    letterSpacing: "-0.5px",
+    fontWeight: theme.typography.fontWeightBold,
+  }),
+  tabs: {
+    "& .MuiTabs-indicator": {
+      backgroundColor: "#FE9F6B",
+      height: 4,
+    },
+  },
+  tab: {
+    fontSize: "1.25rem",
+    textTransform: "none",
+  },
+  activeTab: {
+    color: "#FE9F6B",
+  },
 };
