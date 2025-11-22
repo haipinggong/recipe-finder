@@ -1,7 +1,7 @@
 import { type SxProps, type Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
-  container: (theme: Theme) => ({
+  container: {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
@@ -10,10 +10,8 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 2,
     backgroundColor: "white",
     borderRadius: 2.5,
-    [theme.breakpoints.up("md")]: {
-      maxWidth: "300px",
-    },
-  }),
+    height: "100%",
+  },
   image: {
     width: "100%",
     aspectRatio: "1/1",

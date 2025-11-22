@@ -6,6 +6,7 @@ import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
 import {
   Box,
   FormControl,
+  Grid,
   InputLabel,
   MenuItem,
   Select,
@@ -56,7 +57,7 @@ export const Recipes = () => {
   return (
     <MainLayout>
       <Hero />
-      <Box component="section" sx={styles.gridContainer}>
+      <Box component="section" sx={styles.container}>
         <Box sx={styles.filtersContainer}>
           <Box sx={styles.selectsContainer}>
             <FormControl sx={styles.selectControl}>
@@ -115,13 +116,21 @@ export const Recipes = () => {
             sx={styles.searchBar}
           />
         </Box>
-        {filteredRecipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            {...recipe}
-            imageUrl={getRecipeImageUrl(recipe.image.large)}
-          />
-        ))}
+        <Grid container spacing={4}>
+          {filteredRecipes.map((recipe) => (
+            <Grid
+              size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
+              key={recipe.id}
+              sx={{ display: "flex" }}
+            >
+              <RecipeCard
+                key={recipe.id}
+                {...recipe}
+                imageUrl={getRecipeImageUrl(recipe.image.large)}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </MainLayout>
   );
