@@ -14,19 +14,29 @@ import {
 } from "@mui/material";
 import logo from "../../assets/images/logo.svg";
 import { styles } from "./Header.styles";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import hamburgerMenuIcon from "../../assets/images/icon-hamburger-menu.svg";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { type SxProps, type Theme } from "@mui/material/styles";
 
 export const Header = () => {
+  const location = useLocation();
+  console.log(location);
   const [openMenu, setOpenMenu] = useState(false);
-  const [activeTab, setActiveTab] = useState("Home");
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  console.log(activeTab);
+  const activeTab = useMemo(() => {
+    if (location.pathname === "/") return "Home";
+    if (location.pathname === "/about") return "About";
+    if (
+      location.pathname === "/recipes" ||
+      location.pathname.startsWith("/recipe/")
+    )
+      return "Recipes";
+    return false;
+  }, [location.pathname]);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpenMenu(newOpen);
@@ -42,11 +52,7 @@ export const Header = () => {
       )}
       {!isMobile && (
         <>
-          <Tabs
-            sx={styles.tabs}
-            value={activeTab}
-            onChange={(_, newValue) => setActiveTab(newValue)}
-          >
+          <Tabs sx={styles.tabs} value={activeTab} component="nav">
             <Tab
               label="Home"
               value="Home"

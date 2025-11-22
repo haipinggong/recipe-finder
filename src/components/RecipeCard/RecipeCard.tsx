@@ -4,7 +4,7 @@ import { RecipeMetaInfo } from "../RecipeMetaInfo/RecipeMetaInfo";
 import servingsIcon from "../../assets/images/icon-servings.svg";
 import prepMinutesIcon from "../../assets/images/icon-prep-time.svg";
 import cookMinutesIcon from "../../assets/images/icon-cook-time.svg";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface RecipeCardProps {
   slug: string;
@@ -24,8 +24,6 @@ export const RecipeCard = ({
   prepMinutes,
   cookMinutes,
 }: RecipeCardProps) => {
-  const navigate = useNavigate();
-
   return (
     <Box sx={styles.container}>
       <Box component="img" src={imageUrl} alt={title} sx={styles.image} />
@@ -55,7 +53,8 @@ export const RecipeCard = ({
         color="primary"
         sx={styles.button}
         fullWidth
-        onClick={() => navigate(`/recipe/${slug}`)}
+        component={Link}
+        to={`/recipe/${slug}`}
       >
         View Recipe
       </Button>
