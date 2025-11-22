@@ -44,7 +44,6 @@ theme = createTheme(theme, {
       lineHeight: "110%",
       letterSpacing: "-2px",
       fontWeight: theme.typography.fontWeightExtraBold,
-      color: "#163A34",
       [theme.breakpoints.up("sm")]: {
         fontSize: "4rem",
       },
@@ -57,7 +56,6 @@ theme = createTheme(theme, {
       lineHeight: "120%",
       letterSpacing: "-2px",
       fontWeight: theme.typography.fontWeightExtraBold,
-      color: "#163A34",
       [theme.breakpoints.up("sm")]: {
         fontSize: "3rem",
       },
@@ -67,7 +65,6 @@ theme = createTheme(theme, {
       lineHeight: "130%",
       letterSpacing: "-1px",
       fontWeight: theme.typography.fontWeightBold,
-      color: "#163A34",
     },
     h4: {
       fontSize: "1.5rem",
@@ -86,7 +83,6 @@ theme = createTheme(theme, {
       lineHeight: "150%",
       letterSpacing: "-0.4px",
       fontWeight: theme.typography.fontWeightMedium,
-      color: "#395852",
     },
     body2: {
       fontSize: "1rem",
@@ -102,9 +98,23 @@ theme = createTheme(theme, {
     },
     text: {
       primary: "#163A34",
+      secondary: "#395852",
     },
     background: {
       default: "#F6F5F1",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
+          borderRadius: theme.spacing(1.25),
+          "&:hover, &:focus": {
+            backgroundColor: "#395852",
+          },
+        },
+      },
     },
   },
 });

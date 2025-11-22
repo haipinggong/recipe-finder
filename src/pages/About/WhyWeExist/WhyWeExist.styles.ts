@@ -23,10 +23,8 @@ const styles: Record<string, SxProps<Theme>> = {
     },
   }),
   listItemText: (theme: Theme) => ({
-    "& .MuiListItemText-secondary": { ...theme.typography.body1 },
     "& .MuiListItemText-primary": {
       ...theme.typography.h4,
-      color: theme.palette.text.primary,
     },
   }),
 };

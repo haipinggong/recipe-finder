@@ -33,8 +33,6 @@ const styles: Record<string, SxProps<Theme>> = {
     gap: 1.5,
   },
   button: (theme: Theme) => ({
-    textTransform: "none",
-    borderRadius: 2.5,
     padding: theme.spacing(2, 3),
     fontSize: "1.25rem",
     lineHeight: "140%",
