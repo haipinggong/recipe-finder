@@ -1,18 +1,10 @@
 import { createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
-  interface Palette {
-    green: Palette["primary"];
-  }
-  interface PaletteOptions {
-    green: PaletteOptions["primary"];
-  }
-
   interface TypographyVariants {
     fontWeightExtraBold: string | number;
   }
 
-  // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
     fontWeightExtraBold?: string | number;
   }
@@ -30,9 +22,15 @@ let theme = createTheme({
     fontWeightExtraBold: 800,
   },
   palette: {
-    green: {
-      main: "#0C7D69",
-      light: "#E0F1E8",
+    primary: {
+      main: "#163A34",
+    },
+    text: {
+      primary: "#163A34",
+      secondary: "#395852",
+    },
+    background: {
+      default: "#F6F5F1",
     },
   },
 });
@@ -92,18 +90,6 @@ theme = createTheme(theme, {
       fontFamily: "Nunito Sans, sans-serif",
     },
   },
-  palette: {
-    primary: {
-      main: "#163A34",
-    },
-    text: {
-      primary: "#163A34",
-      secondary: "#395852",
-    },
-    background: {
-      default: "#F6F5F1",
-    },
-  },
   components: {
     MuiButton: {
       styleOverrides: {
@@ -111,7 +97,7 @@ theme = createTheme(theme, {
           textTransform: "capitalize",
           borderRadius: theme.spacing(1.25),
           "&:hover, &:focus": {
-            backgroundColor: "#395852",
+            backgroundColor: theme.palette.text.secondary,
           },
         },
       },
