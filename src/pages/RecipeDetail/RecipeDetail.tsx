@@ -11,6 +11,7 @@ import {
   ListItemIcon,
   Typography,
   Divider,
+  Breadcrumbs,
 } from "@mui/material";
 import { styles } from "./RecipeDetail.styles";
 import { getRecipeImageUrl } from "../../utils/recipeImages";
@@ -19,6 +20,7 @@ import prepMinutesIcon from "../../assets/images/icon-prep-time.svg";
 import cookMinutesIcon from "../../assets/images/icon-cook-time.svg";
 import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
 import iconBulletPoint from "../../assets/images/icon-bullet-point.svg";
+import { Link } from "react-router-dom";
 
 export const RecipeDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -46,6 +48,10 @@ export const RecipeDetail = () => {
 
   return (
     <MainLayout>
+      <Breadcrumbs aria-label="breadcrumb" sx={styles.breadcrumbs}>
+        <Link to="/recipes">Recipes</Link>
+        <Typography>{recipe.title}</Typography>
+      </Breadcrumbs>
       <Box component="section" sx={styles.container}>
         <Box sx={styles.imageContainer}>
           <Box

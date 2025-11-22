@@ -1,18 +1,22 @@
 import { type SxProps, type Theme } from "@mui/material";
 
 export const styles: Record<string, SxProps<Theme>> = {
+  breadcrumbs: {
+    marginTop: 6,
+  },
   container: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    marginTop: 6,
+    marginTop: 2,
     gap: 5,
     [theme.breakpoints.up("lg")]: {
-      marginTop: 10,
+      marginTop: 4,
       flexDirection: "row",
       gap: 8,
     },
   }),
+
   imageContainer: (theme: Theme) => ({
     [theme.breakpoints.up("lg")]: {
       width: "50%",
