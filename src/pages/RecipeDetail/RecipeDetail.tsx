@@ -12,6 +12,7 @@ import {
   Typography,
   Divider,
   Breadcrumbs,
+  Grid,
 } from "@mui/material";
 import { styles } from "./RecipeDetail.styles";
 import { getRecipeImageUrl } from "../../utils/recipeImages";
@@ -132,19 +133,20 @@ export const RecipeDetail = () => {
       <Divider />
       <Box component="section" sx={styles.moreRecipesContainer}>
         <Typography variant="h3">More recipes</Typography>
-        <Box sx={styles.moreRecipes}>
+        <Grid container spacing={4}>
           {recipesData
             .filter((r) => r.id !== recipe.id)
             .sort(() => Math.random() - 0.5)
             .slice(0, 3)
             .map((recipe) => (
-              <RecipeCard
-                key={recipe.id}
-                {...recipe}
-                imageUrl={getRecipeImageUrl(recipe.image.large)}
-              />
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={recipe.id}>
+                <RecipeCard
+                  {...recipe}
+                  imageUrl={getRecipeImageUrl(recipe.image.large)}
+                />
+              </Grid>
             ))}
-        </Box>
+        </Grid>
       </Box>
     </MainLayout>
   );
