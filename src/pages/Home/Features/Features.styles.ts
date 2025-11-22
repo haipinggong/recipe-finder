@@ -20,6 +20,9 @@ const styles: Record<string, SxProps<Theme>> = {
     display: "flex",
     flexDirection: "column",
     gap: 3,
+    listStyle: "none",
+    margin: 0,
+    padding: 0,
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       gap: 4,

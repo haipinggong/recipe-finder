@@ -8,13 +8,14 @@ export const Features = () => {
   return (
     <Box component="section" sx={styles.container}>
       <Typography variant="h2">What you'll get</Typography>
-      <Box sx={styles.features}>
-        <Box sx={styles.feature}>
+      <Box sx={styles.features} component="ul">
+        <Box sx={styles.feature} component="li">
           <Box
             component="img"
             src={wholeFoodRecipesImage}
-            alt="whole food recipes"
+            alt=""
             sx={styles.featureImage}
+            aria-hidden="true"
           />
           <Box>
             <Typography variant="h3">Whole-food recipes</Typography>
@@ -23,12 +24,13 @@ export const Features = () => {
             </Typography>
           </Box>
         </Box>
-        <Box sx={styles.feature}>
+        <Box sx={styles.feature} component="li">
           <Box
             component="img"
             src={minimumFussImage}
-            alt="minimum fuss"
+            alt=""
             sx={styles.featureImage}
+            aria-hidden="true"
           />
           <Box>
             <Typography variant="h3">Minimum fuss</Typography>
@@ -38,12 +40,13 @@ export const Features = () => {
           </Box>
         </Box>
 
-        <Box sx={styles.feature}>
+        <Box sx={styles.feature} component="li">
           <Box
             component="img"
             src={searchInSecondsImage}
-            alt="search in seconds"
+            alt=""
             sx={styles.featureImage}
+            aria-hidden="true"
           />
           <Box>
             <Typography variant="h3">Search in seconds</Typography>

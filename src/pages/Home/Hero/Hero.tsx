@@ -24,7 +24,12 @@ export const Hero = () => {
       >
         Start exploring
       </Button>
-      <Box component="img" sx={styles.image} src={heroImage} alt="home" />
+      <Box
+        component="img"
+        sx={styles.image}
+        src={heroImage}
+        alt="A person cooking healthy meals in a modern kitchen"
+      />
     </Box>
   );
 };

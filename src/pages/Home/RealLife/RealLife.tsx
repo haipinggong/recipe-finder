@@ -24,7 +24,7 @@ export const RealLife = () => {
         <Box
           component="img"
           src={builtForRealLifeImage}
-          alt="built for real life"
+          alt="Fresh ingredients and cooking utensils arranged on a kitchen counter"
           sx={styles.image}
         />
       </Box>

@@ -21,7 +21,6 @@ import { type SxProps, type Theme } from "@mui/material/styles";
 
 export const Header = () => {
   const location = useLocation();
-  console.log(location);
   const [openMenu, setOpenMenu] = useState(false);
 
   const theme = useTheme();
@@ -44,10 +43,23 @@ export const Header = () => {
 
   return (
     <Box component="header" sx={styles.container}>
-      <Box component="img" src={logo} alt="logo" />
+      <Box component={Link} to="/" sx={{ display: "inline-block" }}>
+        <Box component="img" src={logo} alt="Healthy Recipe Finder logo" />
+      </Box>
       {isMobile && (
-        <IconButton onClick={toggleDrawer(true)}>
-          <Box component="img" src={hamburgerMenuIcon} alt="hamburger menu" />
+        <IconButton
+          onClick={toggleDrawer(true)}
+          aria-label={
+            openMenu ? "Close navigation menu" : "Open navigation menu"
+          }
+          aria-expanded={openMenu}
+        >
+          <Box
+            component="img"
+            src={hamburgerMenuIcon}
+            alt=""
+            aria-hidden="true"
+          />
         </IconButton>
       )}
       {!isMobile && (
@@ -58,6 +70,7 @@ export const Header = () => {
               value="Home"
               component={Link}
               to="/"
+              aria-current={activeTab === "Home" ? "page" : undefined}
               sx={
                 [
                   styles.tab,
@@ -70,6 +83,7 @@ export const Header = () => {
               value="About"
               component={Link}
               to="/about"
+              aria-current={activeTab === "About" ? "page" : undefined}
               sx={
                 [
                   styles.tab,
@@ -82,6 +96,7 @@ export const Header = () => {
               value="Recipes"
               component={Link}
               to="/recipes"
+              aria-current={activeTab === "Recipes" ? "page" : undefined}
               sx={
                 [
                   styles.tab,
@@ -101,7 +116,7 @@ export const Header = () => {
         </>
       )}
       <Drawer open={openMenu} onClose={toggleDrawer(false)} anchor="right">
-        <Box sx={{ width: 250 }} role="presentation" component="nav">
+        <Box sx={{ width: 250 }} component="nav" aria-label="Main navigation">
           <List>
             {["Home", "About", "Recipes"].map((text) => (
               <ListItem key={text}>
