@@ -49,7 +49,16 @@ export const RecipeDetail = () => {
   return (
     <MainLayout>
       <Breadcrumbs aria-label="breadcrumb" sx={styles.breadcrumbs}>
-        <Link to="/recipes">Recipes</Link>
+        <Link
+          to="/recipes"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            fontWeight: "bold",
+          }}
+        >
+          Recipes
+        </Link>
         <Typography>{recipe.title}</Typography>
       </Breadcrumbs>
       <Box component="section" sx={styles.container}>
