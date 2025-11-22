@@ -26,6 +26,9 @@ export const styles: Record<string, SxProps<Theme>> = {
     letterSpacing: "-0.5px",
     fontWeight: theme.typography.fontWeightBold,
     marginTop: 4,
+    "&:hover, &:focus": {
+      backgroundColor: "#395852",
+    },
   }),
   image: {
     width: "100%",
