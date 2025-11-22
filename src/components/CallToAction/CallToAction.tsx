@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import styles from "./CallToAction.styles";
-
+import { Link } from "react-router-dom";
 export const CallToAction = () => {
   return (
     <Box component="section" sx={styles.container}>
@@ -11,7 +11,12 @@ export const CallToAction = () => {
         </Typography>
       </Box>
 
-      <Button variant="contained" color="primary" sx={styles.button}>
+      <Button
+        component={Link}
+        variant="contained"
+        to="/recipes"
+        sx={styles.button}
+      >
         Browse recipes
       </Button>
     </Box>
