@@ -14,10 +14,10 @@ const styles: Record<string, SxProps<Theme>> = {
       padding: theme.spacing(2.5, 7.5),
     },
   }),
-  tab: {
-    fontSize: "1.25rem",
+  tab: (theme: Theme) => ({
+    ...theme.typography.h6,
     textTransform: "none",
-  },
+  }),
 };
 
 export default styles;

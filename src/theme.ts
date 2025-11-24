@@ -3,10 +3,12 @@ import { createTheme } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface TypographyVariants {
     fontWeightExtraBold: string | number;
+    fontWeightSemiBold: string | number;
   }
 
   interface TypographyVariantsOptions {
     fontWeightExtraBold?: string | number;
+    fontWeightSemiBold?: string | number;
   }
 
   // Add the new color to the Palette interface
@@ -24,6 +26,7 @@ declare module "@mui/material/styles" {
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     fontWeightExtraBold: true;
+    fontWeightSemiBold: true;
   }
 }
 
@@ -31,6 +34,7 @@ let theme = createTheme({
   typography: {
     fontFamily: "Nunito, Nunito Sans, sans-serif",
     fontWeightExtraBold: 800,
+    fontWeightSemiBold: 600,
   },
   palette: {
     primary: {
@@ -93,6 +97,12 @@ theme = createTheme(theme, {
       lineHeight: "140%",
       letterSpacing: "-0.5px",
       fontWeight: theme.typography.fontWeightBold,
+    },
+    h6: {
+      fontSize: "1.125rem",
+      lineHeight: "150%",
+      letterSpacing: "-0.3px",
+      fontWeight: theme.typography.fontWeightSemiBold,
     },
     body1: {
       fontSize: "1.25rem",
