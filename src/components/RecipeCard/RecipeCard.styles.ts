@@ -19,12 +19,6 @@ const styles: Record<string, SxProps<Theme>> = {
     border: `5px solid white`,
     borderRadius: 2.5,
   },
-  title: (theme: Theme) => ({
-    fontSize: "1.25rem",
-    lineHeight: "140%",
-    letterSpacing: "-0.5px",
-    fontWeight: theme.typography.fontWeightBold,
-  }),
   details: {
     display: "flex",
     columnGap: 2,

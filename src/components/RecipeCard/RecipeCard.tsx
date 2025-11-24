@@ -28,7 +28,7 @@ export const RecipeCard = ({
   return (
     <Box sx={styles.container}>
       <Box component="img" src={imageUrl} alt={title} sx={styles.image} />
-      <Typography component="h2" sx={styles.title}>
+      <Typography component="h2" variant="h5">
         {title}
       </Typography>
       <Typography variant="body2">{overview}</Typography>
