@@ -13,9 +13,8 @@ export const RecipeMetaInfo = ({
 }: RecipeMetaInfoProps) => {
   return (
     <Box sx={styles.container}>
-      <Box component="img" src={iconUrl} alt={label} sx={styles.icon} />
+      <Box component="img" src={iconUrl} alt={label} />
       <Typography variant="body2">{`${label}: ${value}`}</Typography>
     </Box>
   );
 };
-

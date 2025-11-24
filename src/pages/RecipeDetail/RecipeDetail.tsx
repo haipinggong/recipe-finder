@@ -111,9 +111,9 @@ export const RecipeDetail = () => {
               ))}
             </List>
           </Box>
-          <Box sx={styles.instructionsContainer}>
+          <Box>
             <Typography variant="h3">Instructions</Typography>
-            <List sx={styles.instructions}>
+            <List>
               {recipe.instructions.map((instruction) => (
                 <ListItem key={instruction} alignItems="flex-start">
                   <ListItemIcon>

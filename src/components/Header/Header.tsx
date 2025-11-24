@@ -63,7 +63,7 @@ export const Header = () => {
       )}
       {!isMobile && (
         <>
-          <Tabs sx={styles.tabs} value={activeTab} component="nav">
+          <Tabs value={activeTab} component="nav">
             <Tab
               label="Home"
               value="Home"
