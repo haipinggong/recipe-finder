@@ -105,12 +105,7 @@ export const Header = () => {
               }
             />
           </Tabs>
-          <Button
-            variant="contained"
-            component={Link}
-            to="/recipes"
-            sx={styles.button}
-          >
+          <Button component={Link} to="/recipes">
             Browse recipes
           </Button>
         </>

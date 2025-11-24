@@ -32,13 +32,6 @@ const styles: Record<string, SxProps<Theme>> = {
     flexDirection: "column",
     gap: 1.5,
   },
-  button: (theme: Theme) => ({
-    padding: theme.spacing(2, 3),
-    fontSize: "1.25rem",
-    lineHeight: "140%",
-    letterSpacing: "-0.5px",
-    fontWeight: theme.typography.fontWeightBold,
-  }),
 };
 
 export default styles;

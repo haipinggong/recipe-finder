@@ -32,13 +32,10 @@ export const styles: Record<string, SxProps<Theme>> = {
     flexWrap: "wrap",
   },
   button: (theme: Theme) => ({
-    textTransform: "none",
     borderRadius: 999,
     padding: theme.spacing(1.5, 4),
     fontSize: "1rem",
-    lineHeight: "150%",
     letterSpacing: "-0.3px",
-    fontWeight: theme.typography.fontWeightBold,
     fontFamily: "Nunito Sans, sans-serif",
   }),
 };

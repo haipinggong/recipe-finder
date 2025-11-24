@@ -92,10 +92,18 @@ theme = createTheme(theme, {
   },
   components: {
     MuiButton: {
+      defaultProps: {
+        variant: "contained",
+      },
       styleOverrides: {
         root: {
-          textTransform: "capitalize",
+          textTransform: "none",
           borderRadius: theme.spacing(1.25),
+          padding: theme.spacing(2, 3),
+          fontSize: "1.25rem",
+          lineHeight: "140%",
+          letterSpacing: "-0.5px",
+          fontWeight: theme.typography.fontWeightBold,
           "&:hover, &:focus": {
             backgroundColor: theme.palette.text.secondary,
           },

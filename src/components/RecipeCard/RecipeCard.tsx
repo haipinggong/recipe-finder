@@ -49,8 +49,6 @@ export const RecipeCard = ({
         />
       </Box>
       <Button
-        variant="contained"
-        color="primary"
         sx={styles.button}
         fullWidth
         component={Link}

@@ -16,12 +16,7 @@ export const Hero = () => {
         Discover eight quick, whole-food recipes that you can cook tonight—no
         processed junk, no guesswork.
       </Typography>
-      <Button
-        sx={styles.button}
-        variant="contained"
-        component={Link}
-        to="/recipes"
-      >
+      <Button sx={styles.button} component={Link} to="/recipes">
         Start exploring
       </Button>
       <Box

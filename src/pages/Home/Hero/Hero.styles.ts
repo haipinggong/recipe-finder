@@ -18,13 +18,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     maxWidth: "580px",
   },
   button: (theme: Theme) => ({
-    textTransform: "none",
-    borderRadius: 2.5,
     padding: theme.spacing(2, 4),
-    fontSize: "1.25rem",
-    lineHeight: "140%",
-    letterSpacing: "-0.5px",
-    fontWeight: theme.typography.fontWeightBold,
     marginTop: 4,
   }),
   image: {
