@@ -96,13 +96,13 @@ export const Recipes = () => {
           </Box>
 
           <TextField
-            label="Search by name or ingredient"
             placeholder="Search by name or ingredient…"
             value={search}
             onChange={handleSearchChange}
             fullWidth
             slotProps={{
               input: {
+                "aria-label": "Search by name or ingredient",
                 startAdornment: (
                   <Box
                     component="img"
