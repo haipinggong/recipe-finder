@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps<Theme>> = {
+const styles: Record<string, SxProps<Theme>> = {
   container: {
     display: "flex",
     flexDirection: "column",
@@ -39,3 +39,5 @@ export const styles: Record<string, SxProps<Theme>> = {
     fontFamily: "Nunito Sans, sans-serif",
   }),
 };
+
+export default styles;

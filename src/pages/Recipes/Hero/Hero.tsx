@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { styles } from "./Hero.styles";
+import styles from "./Hero.styles";
 
 export const Hero = () => {
   return (

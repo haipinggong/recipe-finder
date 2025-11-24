@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { styles } from "./RecipeMetaInfo.styles";
+import styles from "./RecipeMetaInfo.styles";
 
 interface RecipeMetaInfoProps {
   iconUrl: string;

@@ -14,7 +14,7 @@ import {
   Breadcrumbs,
   Grid,
 } from "@mui/material";
-import { styles } from "./RecipeDetail.styles";
+import styles from "./RecipeDetail.styles";
 import { getRecipeImageUrl } from "../../utils/recipeImages";
 import servingsIcon from "../../assets/images/icon-servings.svg";
 import prepMinutesIcon from "../../assets/images/icon-prep-time.svg";

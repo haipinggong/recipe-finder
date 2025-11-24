@@ -2,7 +2,7 @@ import { Box, Typography, IconButton } from "@mui/material";
 import instagramIcon from "../../assets/images/icon-instagram.svg";
 import blueSkyIcon from "../../assets/images/icon-bluesky.svg";
 import tiktokIcon from "../../assets/images/icon-tiktok.svg";
-import { styles } from "./Footer.styles";
+import styles from "./Footer.styles";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -19,6 +19,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit our Instagram page (opens in new tab)"
+          sx={styles.iconButton}
         >
           <Box component="img" src={instagramIcon} alt="" aria-hidden="true" />
         </IconButton>
@@ -28,6 +29,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit our Blue Sky page (opens in new tab)"
+          sx={styles.iconButton}
         >
           <Box component="img" src={blueSkyIcon} alt="" aria-hidden="true" />
         </IconButton>
@@ -37,6 +39,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit our TikTok page (opens in new tab)"
+          sx={styles.iconButton}
         >
           <Box component="img" src={tiktokIcon} alt="" aria-hidden="true" />
         </IconButton>

@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps<Theme>> = {
+const styles: Record<string, SxProps<Theme>> = {
   container: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
@@ -23,4 +23,11 @@ export const styles: Record<string, SxProps<Theme>> = {
     lineHeight: "150%",
     letterSpacing: "-0.3px",
   },
+  iconButton: {
+    "&:hover, &:focus": {
+      opacity: 0.5,
+    },
+  },
 };
+
+export default styles;

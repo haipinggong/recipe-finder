@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps<Theme>> = {
+const styles: Record<string, SxProps<Theme>> = {
   container: (theme: Theme) => ({
     paddingInline: 2,
     [theme.breakpoints.up("sm")]: {
@@ -11,3 +11,5 @@ export const styles: Record<string, SxProps<Theme>> = {
     },
   }),
 };
+
+export default styles;

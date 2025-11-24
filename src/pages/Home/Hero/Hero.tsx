@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import heroImage from "../../../assets/images/image-home-hero-large.webp";
-import { styles } from "./Hero.styles";
+import styles from "./Hero.styles";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {

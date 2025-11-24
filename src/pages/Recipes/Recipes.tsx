@@ -13,7 +13,7 @@ import {
   type SelectChangeEvent,
   TextField,
 } from "@mui/material";
-import { styles } from "./Recipes.styles";
+import styles from "./Recipes.styles";
 import { getRecipeImageUrl } from "../../utils/recipeImages";
 import searchIcon from "../../assets/images/icon-search.svg";
 

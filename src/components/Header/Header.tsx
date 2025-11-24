@@ -13,7 +13,7 @@ import {
   Button,
 } from "@mui/material";
 import logo from "../../assets/images/logo.svg";
-import { styles } from "./Header.styles";
+import styles from "./Header.styles";
 import { Link, useLocation } from "react-router-dom";
 import hamburgerMenuIcon from "../../assets/images/icon-hamburger-menu.svg";
 import { useMemo, useState } from "react";

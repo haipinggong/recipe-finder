@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps<Theme>> = {
+const styles: Record<string, SxProps<Theme>> = {
   breadcrumbs: {
     marginTop: 6,
   },
@@ -58,3 +58,5 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 2,
   },
 };
+
+export default styles;

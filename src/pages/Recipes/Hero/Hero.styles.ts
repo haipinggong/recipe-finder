@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps<Theme>> = {
+const styles: Record<string, SxProps<Theme>> = {
   container: (theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
@@ -25,3 +25,5 @@ export const styles: Record<string, SxProps<Theme>> = {
     gap: 2,
   },
 };
+
+export default styles;

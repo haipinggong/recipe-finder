@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import heroImage from "../../../assets/images/image-about-our-mission-large.webp";
-import { styles } from "./Hero.styles";
+import styles from "./Hero.styles";
 
 export const Hero = () => {
   return (

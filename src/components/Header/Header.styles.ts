@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps<Theme>> = {
+const styles: Record<string, SxProps<Theme>> = {
   container: (theme: Theme) => ({
     padding: 2,
     borderBottom: "1px solid #E0E6E3",
@@ -19,3 +19,5 @@ export const styles: Record<string, SxProps<Theme>> = {
     textTransform: "none",
   },
 };
+
+export default styles;

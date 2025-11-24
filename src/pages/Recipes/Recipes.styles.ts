@@ -1,6 +1,6 @@
 import { type SxProps, type Theme } from "@mui/material";
 
-export const styles: Record<string, SxProps<Theme>> = {
+const styles: Record<string, SxProps<Theme>> = {
   container: {
     marginTop: 4,
     display: "flex",
@@ -45,3 +45,5 @@ export const styles: Record<string, SxProps<Theme>> = {
     marginRight: 1,
   },
 };
+
+export default styles;
