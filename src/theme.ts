@@ -119,6 +119,13 @@ theme = createTheme(theme, {
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        "*": {
+          boxSizing: "border-box",
+        },
+      },
+    },
     MuiButton: {
       defaultProps: {
         variant: "contained",
