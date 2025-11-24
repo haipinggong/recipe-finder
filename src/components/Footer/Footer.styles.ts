@@ -17,12 +17,6 @@ const styles: Record<string, SxProps<Theme>> = {
     display: "flex",
     gap: 2,
   },
-  copyright: {
-    fontSize: "1rem",
-    fontFamily: "Nunito Sans, sans-serif",
-    lineHeight: "150%",
-    letterSpacing: "-0.3px",
-  },
   iconButton: {
     "&:hover, &:focus": {
       opacity: 0.5,

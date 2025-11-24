@@ -44,7 +44,7 @@ export const Footer = () => {
           <Box component="img" src={tiktokIcon} alt="" aria-hidden="true" />
         </IconButton>
       </Box>
-      <Typography sx={styles.copyright}>Made with ❤️ and 🥑</Typography>
+      <Typography variant="body2">Made with ❤️ and 🥑</Typography>
     </Box>
   );
 };

@@ -1,11 +1,11 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import styles from "./RecipeCard.styles";
 import { RecipeMetaInfo } from "../RecipeMetaInfo/RecipeMetaInfo";
 import servingsIcon from "../../assets/images/icon-servings.svg";
 import prepMinutesIcon from "../../assets/images/icon-prep-time.svg";
 import cookMinutesIcon from "../../assets/images/icon-cook-time.svg";
 import { Link } from "react-router-dom";
-
+import { type SxProps, type Theme } from "@mui/material/styles";
 interface RecipeCardProps {
   slug: string;
   imageUrl: string;
@@ -24,6 +24,7 @@ export const RecipeCard = ({
   prepMinutes,
   cookMinutes,
 }: RecipeCardProps) => {
+  const theme = useTheme();
   return (
     <Box sx={styles.container}>
       <Box component="img" src={imageUrl} alt={title} sx={styles.image} />
@@ -49,7 +50,7 @@ export const RecipeCard = ({
         />
       </Box>
       <Button
-        sx={styles.button}
+        sx={[theme.typography.body2, styles.button] as SxProps<Theme>}
         fullWidth
         component={Link}
         to={`/recipe/${slug}`}
