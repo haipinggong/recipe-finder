@@ -5,6 +5,7 @@ import recipesData from "../../data/data.json";
 import { RecipeMetaInfo } from "../../components/RecipeMetaInfo/RecipeMetaInfo";
 import {
   Box,
+  Link,
   List,
   ListItem,
   ListItemText,
@@ -21,7 +22,7 @@ import prepMinutesIcon from "../../assets/images/icon-prep-time.svg";
 import cookMinutesIcon from "../../assets/images/icon-cook-time.svg";
 import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
 import iconBulletPoint from "../../assets/images/icon-bullet-point.svg";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 export const RecipeDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -50,14 +51,7 @@ export const RecipeDetail = () => {
   return (
     <MainLayout>
       <Breadcrumbs aria-label="breadcrumb" sx={styles.breadcrumbs}>
-        <Link
-          to="/recipes"
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            fontWeight: "bold",
-          }}
-        >
+        <Link component={RouterLink} to="/recipes" sx={styles.link}>
           Recipes
         </Link>
         <Typography>{recipe.title}</Typography>

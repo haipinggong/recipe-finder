@@ -12,10 +12,12 @@ declare module "@mui/material/styles" {
   // Add the new color to the Palette interface
   interface Palette {
     orange: Palette["primary"];
+    neutral: Palette["primary"];
   }
 
   interface PaletteOptions {
     orange?: PaletteOptions["primary"];
+    neutral?: PaletteOptions["primary"];
   }
 }
 
@@ -44,6 +46,9 @@ let theme = createTheme({
     },
     background: {
       default: "#F6F5F1",
+    },
+    neutral: {
+      main: "#E0E6E3",
     },
   },
 });

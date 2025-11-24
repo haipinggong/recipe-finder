@@ -4,7 +4,7 @@ import patternKnife from "../../assets/images/pattern-knife.svg";
 
 const styles: Record<string, SxProps<Theme>> = {
   container: (theme: Theme) => ({
-    backgroundColor: "#E0E6E3",
+    backgroundColor: theme.palette.neutral.main,
     borderRadius: 4,
     padding: theme.spacing(6, 2),
     display: "flex",

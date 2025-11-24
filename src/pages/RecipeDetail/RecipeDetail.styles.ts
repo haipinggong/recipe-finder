@@ -16,7 +16,11 @@ const styles: Record<string, SxProps<Theme>> = {
       gap: 8,
     },
   }),
-
+  link: {
+    textDecoration: "none",
+    color: "inherit",
+    fontWeight: "bold",
+  },
   imageContainer: (theme: Theme) => ({
     [theme.breakpoints.up("lg")]: {
       width: "50%",
