@@ -48,7 +48,7 @@ const styles: Record<string, SxProps<Theme>> = {
         top: "50%",
         transform: "translateY(-10%)",
         height: "0.6em",
-        backgroundColor: "#FE9F6B",
+        backgroundColor: theme.palette.orange.main,
         zIndex: -1,
         borderRadius: "2px",
       },

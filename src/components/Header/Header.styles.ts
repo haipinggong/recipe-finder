@@ -14,17 +14,8 @@ export const styles: Record<string, SxProps<Theme>> = {
       padding: theme.spacing(2.5, 7.5),
     },
   }),
-  tabs: {
-    "& .MuiTabs-indicator": {
-      backgroundColor: "#FE9F6B",
-      height: 4,
-    },
-  },
   tab: {
     fontSize: "1.25rem",
     textTransform: "none",
-  },
-  activeTab: {
-    color: "#FE9F6B",
   },
 };

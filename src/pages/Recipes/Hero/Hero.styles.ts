@@ -19,7 +19,7 @@ export const styles: Record<string, SxProps<Theme>> = {
     alignItems: "flex-start",
     gap: 3,
   },
-  title: {
+  title: (theme: Theme) => ({
     position: "relative",
     "&::before": {
       content: '""',
@@ -27,11 +27,11 @@ export const styles: Record<string, SxProps<Theme>> = {
       left: "-4px",
       right: "-4px",
       height: "1.25em",
-      backgroundColor: "#FE9F6B",
+      backgroundColor: theme.palette.orange.main,
       zIndex: -1,
       borderRadius: 1,
     },
-  },
+  }),
   description: {
     display: "flex",
     flexDirection: "column",

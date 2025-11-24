@@ -17,7 +17,6 @@ import { styles } from "./Header.styles";
 import { Link, useLocation } from "react-router-dom";
 import hamburgerMenuIcon from "../../assets/images/icon-hamburger-menu.svg";
 import { useMemo, useState } from "react";
-import { type SxProps, type Theme } from "@mui/material/styles";
 
 export const Header = () => {
   const location = useLocation();
@@ -71,12 +70,7 @@ export const Header = () => {
               component={Link}
               to="/"
               aria-current={activeTab === "Home" ? "page" : undefined}
-              sx={
-                [
-                  styles.tab,
-                  activeTab === "Home" && styles.activeTab,
-                ] as SxProps<Theme>
-              }
+              sx={styles.tab}
             />
             <Tab
               label="About"
@@ -84,12 +78,7 @@ export const Header = () => {
               component={Link}
               to="/about"
               aria-current={activeTab === "About" ? "page" : undefined}
-              sx={
-                [
-                  styles.tab,
-                  activeTab === "About" && styles.activeTab,
-                ] as SxProps<Theme>
-              }
+              sx={styles.tab}
             />
             <Tab
               label="Recipes"
@@ -97,12 +86,7 @@ export const Header = () => {
               component={Link}
               to="/recipes"
               aria-current={activeTab === "Recipes" ? "page" : undefined}
-              sx={
-                [
-                  styles.tab,
-                  activeTab === "Recipes" && styles.activeTab,
-                ] as SxProps<Theme>
-              }
+              sx={styles.tab}
             />
           </Tabs>
           <Button component={Link} to="/recipes">

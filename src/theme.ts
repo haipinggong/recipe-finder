@@ -8,6 +8,15 @@ declare module "@mui/material/styles" {
   interface TypographyVariantsOptions {
     fontWeightExtraBold?: string | number;
   }
+
+  // Add the new color to the Palette interface
+  interface Palette {
+    orange: Palette["primary"];
+  }
+
+  interface PaletteOptions {
+    orange?: PaletteOptions["primary"];
+  }
 }
 
 declare module "@mui/material/Typography" {
@@ -24,6 +33,10 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "#163A34",
+    },
+    // Define the new color here
+    orange: {
+      main: "#FE9F6B",
     },
     text: {
       primary: "#163A34",
@@ -107,6 +120,14 @@ theme = createTheme(theme, {
           "&:hover, &:focus": {
             backgroundColor: theme.palette.text.secondary,
           },
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        indicator: {
+          backgroundColor: theme.palette.orange.main,
+          height: 4,
         },
       },
     },
