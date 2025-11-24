@@ -19,7 +19,7 @@ export const WhyWeExist = () => {
       <List>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
-            <Box component="img" src={iconBulletPoint} alt="bullet point" />
+            <Box component="img" src={iconBulletPoint} alt="" aria-hidden="true" />
           </ListItemIcon>
           <ListItemText
             primary="Cut through the noise."
@@ -29,7 +29,7 @@ export const WhyWeExist = () => {
         </ListItem>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
-            <Box component="img" src={iconBulletPoint} alt="bullet point" />
+            <Box component="img" src={iconBulletPoint} alt="" aria-hidden="true" />
           </ListItemIcon>
           <ListItemText
             primary="Empower home kitchens."
@@ -39,7 +39,7 @@ export const WhyWeExist = () => {
         </ListItem>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
-            <Box component="img" src={iconBulletPoint} alt="bullet point" />
+            <Box component="img" src={iconBulletPoint} alt="" aria-hidden="true" />
           </ListItemIcon>
           <ListItemText
             primary="Make healthy look good."

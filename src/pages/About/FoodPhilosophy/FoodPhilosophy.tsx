@@ -19,7 +19,12 @@ export const FoodPhilosophy = () => {
       <List>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
-            <Box component="img" src={iconBulletPoint} alt="bullet point" />
+            <Box
+              component="img"
+              src={iconBulletPoint}
+              alt=""
+              aria-hidden="true"
+            />
           </ListItemIcon>
           <ListItemText
             primary="Whole ingredients first."
@@ -29,7 +34,12 @@ export const FoodPhilosophy = () => {
         </ListItem>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
-            <Box component="img" src={iconBulletPoint} alt="bullet point" />
+            <Box
+              component="img"
+              src={iconBulletPoint}
+              alt=""
+              aria-hidden="true"
+            />
           </ListItemIcon>
           <ListItemText
             primary="Flavor without compromise."
@@ -39,7 +49,12 @@ export const FoodPhilosophy = () => {
         </ListItem>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
-            <Box component="img" src={iconBulletPoint} alt="bullet point" />
+            <Box
+              component="img"
+              src={iconBulletPoint}
+              alt=""
+              aria-hidden="true"
+            />
           </ListItemIcon>
           <ListItemText
             primary="Respect for time."
@@ -49,7 +64,12 @@ export const FoodPhilosophy = () => {
         </ListItem>
         <ListItem alignItems="flex-start">
           <ListItemIcon>
-            <Box component="img" src={iconBulletPoint} alt="bullet point" />
+            <Box
+              component="img"
+              src={iconBulletPoint}
+              alt=""
+              aria-hidden="true"
+            />
           </ListItemIcon>
           <ListItemText
             primary="Sustainable choices."

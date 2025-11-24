@@ -96,6 +96,7 @@ export const Recipes = () => {
           </Box>
 
           <TextField
+            label="Search by name or ingredient"
             placeholder="Search by name or ingredient…"
             value={search}
             onChange={handleSearchChange}
@@ -106,7 +107,8 @@ export const Recipes = () => {
                   <Box
                     component="img"
                     src={searchIcon}
-                    alt="search"
+                    alt=""
+                    aria-hidden="true"
                     sx={styles.searchIcon}
                   />
                 ),

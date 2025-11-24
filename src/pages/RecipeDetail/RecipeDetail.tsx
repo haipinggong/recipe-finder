@@ -91,13 +91,17 @@ export const RecipeDetail = () => {
           <Box sx={styles.ingredientsContainer}>
             <Typography variant="h3">Ingredients</Typography>
             <List sx={styles.ingredients}>
-              {recipe.ingredients.map((ingredient) => (
-                <ListItem key={ingredient} alignItems="flex-start">
+              {recipe.ingredients.map((ingredient, index) => (
+                <ListItem
+                  key={`${ingredient}-${index}`}
+                  alignItems="flex-start"
+                >
                   <ListItemIcon>
                     <Box
                       component="img"
                       src={iconBulletPoint}
-                      alt="bullet point"
+                      alt=""
+                      aria-hidden="true"
                     />
                   </ListItemIcon>
                   <ListItemText primary={ingredient} />
@@ -108,13 +112,17 @@ export const RecipeDetail = () => {
           <Box>
             <Typography variant="h3">Instructions</Typography>
             <List>
-              {recipe.instructions.map((instruction) => (
-                <ListItem key={instruction} alignItems="flex-start">
+              {recipe.instructions.map((instruction, index) => (
+                <ListItem
+                  key={`${instruction}-${index}`}
+                  alignItems="flex-start"
+                >
                   <ListItemIcon>
                     <Box
                       component="img"
                       src={iconBulletPoint}
-                      alt="bullet point"
+                      alt=""
+                      aria-hidden="true"
                     />
                   </ListItemIcon>
                   <ListItemText primary={instruction} />

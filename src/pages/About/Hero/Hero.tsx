@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <Box component="section" sx={styles.container}>
       <Box sx={styles.content}>
-        <Typography sx={styles.title} variant="h5">
+        <Typography sx={styles.title} variant="h5" component="p">
           Our mission
         </Typography>
         <Typography variant="h1">
