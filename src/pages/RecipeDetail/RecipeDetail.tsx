@@ -9,7 +9,6 @@ import {
   List,
   ListItem,
   ListItemText,
-  ListItemIcon,
   Typography,
   Divider,
   Breadcrumbs,
@@ -21,7 +20,7 @@ import servingsIcon from "../../assets/images/icon-servings.svg";
 import prepMinutesIcon from "../../assets/images/icon-prep-time.svg";
 import cookMinutesIcon from "../../assets/images/icon-cook-time.svg";
 import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
-import iconBulletPoint from "../../assets/images/icon-bullet-point.svg";
+import { BulletPoint } from "../../components/BulletPoint/BulletPoint";
 import { Link as RouterLink } from "react-router-dom";
 
 export const RecipeDetail = () => {
@@ -96,14 +95,7 @@ export const RecipeDetail = () => {
                   key={`${ingredient}-${index}`}
                   alignItems="flex-start"
                 >
-                  <ListItemIcon>
-                    <Box
-                      component="img"
-                      src={iconBulletPoint}
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </ListItemIcon>
+                  <BulletPoint />
                   <ListItemText primary={ingredient} />
                 </ListItem>
               ))}
@@ -117,14 +109,7 @@ export const RecipeDetail = () => {
                   key={`${instruction}-${index}`}
                   alignItems="flex-start"
                 >
-                  <ListItemIcon>
-                    <Box
-                      component="img"
-                      src={iconBulletPoint}
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </ListItemIcon>
+                  <BulletPoint />
                   <ListItemText primary={instruction} />
                 </ListItem>
               ))}

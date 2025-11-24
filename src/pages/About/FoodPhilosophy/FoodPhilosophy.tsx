@@ -1,13 +1,6 @@
-import {
-  Box,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import iconBulletPoint from "../../../assets/images/icon-bullet-point.svg";
+import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 
+import { BulletPoint } from "../../../components/BulletPoint/BulletPoint";
 import styles from "./FoodPhylosophy.styles";
 
 export const FoodPhilosophy = () => {
@@ -18,14 +11,7 @@ export const FoodPhilosophy = () => {
       </Typography>
       <List>
         <ListItem alignItems="flex-start">
-          <ListItemIcon>
-            <Box
-              component="img"
-              src={iconBulletPoint}
-              alt=""
-              aria-hidden="true"
-            />
-          </ListItemIcon>
+          <BulletPoint />
           <ListItemText
             primary="Whole ingredients first."
             secondary="Fresh produce, grains, legumes, herbs, and quality fats form the backbone of every recipe."
@@ -33,14 +19,7 @@ export const FoodPhilosophy = () => {
           />
         </ListItem>
         <ListItem alignItems="flex-start">
-          <ListItemIcon>
-            <Box
-              component="img"
-              src={iconBulletPoint}
-              alt=""
-              aria-hidden="true"
-            />
-          </ListItemIcon>
+          <BulletPoint />
           <ListItemText
             primary="Flavor without compromise."
             secondary="Spices, citrus, and natural sweetness replace excess salt, sugar, and additives."
@@ -48,14 +27,7 @@ export const FoodPhilosophy = () => {
           />
         </ListItem>
         <ListItem alignItems="flex-start">
-          <ListItemIcon>
-            <Box
-              component="img"
-              src={iconBulletPoint}
-              alt=""
-              aria-hidden="true"
-            />
-          </ListItemIcon>
+          <BulletPoint />
           <ListItemText
             primary="Respect for time."
             secondary="Weeknight meals should slot into real schedules; weekend cooking can be leisurely but never wasteful."
@@ -63,14 +35,7 @@ export const FoodPhilosophy = () => {
           />
         </ListItem>
         <ListItem alignItems="flex-start">
-          <ListItemIcon>
-            <Box
-              component="img"
-              src={iconBulletPoint}
-              alt=""
-              aria-hidden="true"
-            />
-          </ListItemIcon>
+          <BulletPoint />
           <ListItemText
             primary="Sustainable choices."
             secondary="Short ingredient lists cut down on food waste and carbon footprint, while plant-forward dishes keep things planet-friendly."
