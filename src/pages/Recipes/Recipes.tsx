@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent, useEffect } from "react";
 import { Hero } from "./Hero/Hero";
 import { MainLayout } from "../../components/MainLayout/MainLayout";
 import recipesData from "../../data/data.json";
@@ -53,6 +53,10 @@ export const Recipes = () => {
 
     return prepTimeMatches && cookTimeMatches;
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <MainLayout>
